@@ -46,10 +46,10 @@ export default function Login() {
                 </div>
 
                 <p className="text-center mt-4 border-none relative ">
-                    Need an account? <Link to={"/signup"} class="underline"> Sign up</Link>
+                    Need an account? <Link to={"/signup"} className="underline"> Sign up</Link>
                 </p>
                 <p className="text-center mt-4 border-none relative ">
-                    <Link to={"/forgot-password"} class="underline"> Forgot password?</Link>
+                    <Link to={"/forgot-password"} className="underline"> Forgot password?</Link>
                 </p>
                 <button disabled={loading} onClick={handleSubmit} className='w-full my-5 py-2 border relative bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'>SIGN IN</button>
                 
