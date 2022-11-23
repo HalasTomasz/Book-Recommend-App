@@ -20,7 +20,8 @@ function Navbar(){
     try {
      
       await logout()
-      navigate('/');
+      navigate('/login');
+      window.location.reload();
     } catch {
  
     }

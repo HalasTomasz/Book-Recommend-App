@@ -14,21 +14,30 @@ export default function HistorySlicer({item}) {
         SetReturned(!returned)
     }
   return (
-    <div className=' w-[160px] max-[640px]:h-60 sm:h-64 md:h-72 lg:h-96 sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block  relative p-2'>
-      <img
-        className='w-full block h-full pb-2'
-        src={item.Book_Image}
-        alt={item?.Name}
-      />
-      <p className="text-red-700  rounded text-xl flex-shrink-0 w-auto flex-wrap"> {item.Auhtor_Name} </p>
-      <h3 className="text-2xl font-bold text-indigo-800 my-2 h-20 break-words">a a {item.Name}</h3>
-      <p className="capitalize text-[#00df9a]">Borrow Date: {date}</p>
-      {/*{!returned &&
-              <button 
-                onClick={returnBook}
-                className="w-full bg-black text-[#00df9a] inline-block rounded-md font-medium my-6 py-3">
-                  Return Book
-        </button>} */}
-   </div>
+
+      <div className='w-[160px] max-[640px]:h-60 sm:h-64 md:h-72 lg:h-96 sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
+        <img
+          className='w-full  h-full block '
+          src={item.Book_Image}
+          alt={item?.Name}
+        />
+        <div  className='absolute top-0 left-0 w-full h-full hover:bg-black/60 opacity-0 hover:opacity-100 text-white overflow-auto'>
+        <p className='whitespace-normal text-xs md:text-sm font-bold h-full text-center flex justify-center items-center'>
+          {item?.Name}
+        </p>
+        <p>
+        </p>
+      </div>
+      {!returned &&
+          <button 
+            onClick={returnBook}
+            className="w-full h-auto bg-black text-[#00df9a]  rounded-md font-medium pt-2 mt-2 mb-1 inline-block">
+              Return Book
+          </button>}
+          {returned &&
+          <button 
+            className="w-full h-auto invisible rounded-md font-medium pt-2 mt-2 mb-1  inline-block"> A
+          </button>}
+          </div>
   )
 }

@@ -34,35 +34,36 @@ export default function SearchBar() {
         };
       
         return (
-          <div className="grid h-screen justify-center items-center bg-gray-500">
-            <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-1 px-4">
-              <div className="relative hidden md:block">
-                  <form className='absolute md:static top-10 -left-20 bg-white'>
+          <div className="h-screen bg-gray-500">
+          <div className="grid items-center justify-center pt-6">
+            <div className="w-full border-b-4 border-black py-1 px-4">
+              <div className="relative block">
+                  <form className=' static bg-white'>
                       <input
                           value={words}
                           onChange={handleFilter}
-                          className='bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 w-[300px] md:w-[350px] rounded-full  md:top-0'
-                          placeholder='Szukaj ogloszen'
+                          className='bg-primary p-3 md:text-md font-medium border-2 border-green-900 focus:outline-none focus:border-2 focus:border-gray-300 w-full md:w-[350px] rounded-full  md:top-0'
+                          placeholder='Search for books'
                       />
                       <button
-                          //onClick={handleSearch}
-                          className='absolute md:right-5 right-6 top-4 border-l-2 border-gray-300 pl-4 text-2xl text-gray-400'
+                          className='absolute md:right-5 right-6 top-4 border-l-2 border-pink-300 pl-4 text-2xl text-gray-400'
                       >
                           <BiSearch />
                       </button>
                   </form>
               </div>
             </div>
-            {filterOnData.length != 0 && (
+            {filterOnData.length !== 0 && (
               <div className="bg-white  overflow-hidden">
-                {filterOnData.slice(0, 6).map((value, key) => {
+                {filterOnData.slice(0, 8).map((value, key) => {
                   return (
-                    <a className="" href={`/books/${value.Book_ID}`} target="_blank">
+                    <a className="" href={`/books/${value.Book_ID}`} >
                       <p>{value.Name} </p>
                     </a>
                   );
                 })} 
               </div>)}
+            </div>
             </div>
         );
       }

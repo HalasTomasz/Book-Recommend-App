@@ -1,0 +1,22 @@
+export const dicts = {
+        "Ford": "Szybki Ford",
+        "Vauxhall" : "Szybki Vauxhall",
+        "Volkswagen" : "Szybki Volkswagen",
+        "Nissan" : "Szybki Nissan",
+        "Audi" : "Szybki Audi",
+        "Mercedes-Benz": "Szybki Mercedes",
+        "BMW" : "Szybki BMW",
+        "Peugeot" : "Szybki Peugeot",
+        "Toyota" : "Szybki Toyota",
+        "Citroen" : "Szybki Citroen",
+        "Ford1": "Szybki 1",
+        "Vauxhall1": "Szybki 2",
+        "Volkswagen1" : "Szybki 3",
+        "Nissan1": "Szybki 4",
+        "Audi2": "Szybki 5",
+        "Mercedes-Benz3": "Szybki 6",
+        "BMW4" :"Szybki 7",
+        "Peugeot5" : "Szybki 8",
+        "Toyota6": "Szybki 9",
+        "Citroen7": ["Szybki 10","Szybki 11"]
+  };

@@ -7,8 +7,8 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Book, BookReaders, Genre, History, UserGenre
-from .serializer import BookSerializer, BookReadersSerializer, BookGenreSerializer , GenreSerializer, HistorySerializer
+from .models import Book, BookReaders, Genre, History, UserGenre, AlgorithmRecomendations, GenreShort
+from .serializer import BookSerializer, BookReadersSerializer, BookGenreSerializer , GenreSerializer, HistorySerializer, AlogrithmSerializer
 import datetime
 # Create your views here.
 
@@ -48,7 +48,7 @@ def getUser(request, id):
 @api_view(['PUT'])
 def updateUser(request, id):
     data_user = request.data
-    BookReaders.objects.get(FireBaseAuth=id).update(Name=data_user['name'], Age=data_user['age'], Sex=data_user['sex'])
+    BookReaders.objects.filter(FireBaseAuth=id).update(Name=data_user['name'], Age=data_user['age'], Sex=data_user['sex'])
     return Response("Data updated")
 
 @api_view(['POST'])
@@ -76,16 +76,23 @@ def getUserHistory(request, user_auth_key):
     return Response(serializer.data)    
 
 @api_view(['GET'])
+def getShortGenre(request):
+    genre = GenreShort.objects.filter()
+    serializer = GenreSerializer(genre, many=True)
+    return Response(serializer.data) 
+
+@api_view(['GET'])
 def getGenre(request):
     genre = Genre.objects.filter()
     serializer = GenreSerializer(genre, many=True)
     return Response(serializer.data) 
     
+    
 @api_view(['GET'])
 def getUserGenre(request, id):
     user = BookReaders.objects.get(FireBaseAuth=id)
     genres_id = UserGenre.objects.filter(Reader_ID=user.Reader_ID).values_list('Genre_ID',flat=True)
-    genres_name =  Genre.objects.filter(Genre_ID__in=genres_id)
+    genres_name =  GenreShort.objects.filter(Genre_ID__in=genres_id)
     serializer = GenreSerializer(genres_name, many=True)
     return Response(serializer.data) 
 
@@ -136,5 +143,13 @@ def getUserHistory(request, id):
     user = BookReaders.objects.get(FireBaseAuth=id)
     user_hist = History.objects.filter(Reader_ID=user.Reader_ID).order_by("-Date_Taken")
     serializer = HistorySerializer(user_hist,many=True)
+
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def getUserDataAlgo(request, id):
+    user = BookReaders.objects.get(FireBaseAuth=id)
+    user_recomendation = AlgorithmRecomendations.objects.filter(Reader_ID=user.Reader_ID)
+    serializer = AlogrithmSerializer(user_recomendation,many=True)
 
     return Response(serializer.data)

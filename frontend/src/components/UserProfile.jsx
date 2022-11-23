@@ -8,21 +8,21 @@ import Select from 'react-tailwindcss-select'
 import { FirebaseError } from "firebase/app"
 
 export default function Profil() {
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const emailRef = useRef()
-    const userNameRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
     const { currentUser, updateemail, updatepassword } = useAuth()
-
+   
     useEffect(() => {
         dispatch(getUser(currentUser.uid))
         dispatch(listGenre())
         dispatch(listUserGenre(currentUser.uid))
       },[dispatch])
-    
 
+    const emailRef = useRef()
+    const userNameRef = useRef()
+    const passwordRef = useRef()
+    const passwordConfirmRef = useRef()
   const userDBData = useSelector(state => state.getUser)
   const {errors, loadings, user} = userDBData
   const userGenreTypes = useSelector(state => state.getUserGenre.user_genres)
@@ -32,10 +32,10 @@ export default function Profil() {
   const [userGenre, setUserGenre] = useState(userGenres);
   const [userSex, setUserSex] = useState({value:user.Sex,label:user.Sex});  
   const [userAge, setUserAge] = useState({value:user.Age, label:user.Age});
-  const [name,SetName] = useState(user.Name)
+  const [name, SetName] = useState(user.Name)
   const [errorMess, setError] = useState("")
   const [loadingtype, setLoading] = useState(false)
-
+  console.log(user)
  
   const ages = [
     {value: "16", label: "🦊 0-16"},
@@ -95,6 +95,10 @@ export default function Profil() {
 
 
     Promise.all(promisies).then(() =>{
+        SetName(userNameRef.current.value)
+        setUserAge(userAge['value'])
+        setUserGenre(userGenre)
+        setUserSex(userSex['value'])
         navigate('/');
     }).catch((ex) =>{
         if (ex instanceof FirebaseError){
@@ -112,7 +116,7 @@ export default function Profil() {
 
    <div className='relative w-full h-screen bg-zinc-900/90'>
         <img src='https://media.istockphoto.com/photos/wooden-brown-books-shelves-with-a-lamp-picture-id1085770318' className="h-full absolute w-full object-cover mix-blend-overlay" />
-        <div className='flex items-center justify-center h-autp pt-10 '>
+        <div className='flex items-center justify-center h-auto pt-10 '>
             <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-10'>
                 <h2 className='text-4xl font-bold text-center py-5'>Update User</h2>
                 {errorMess && <div role="alert"> <div className="border relative border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700"> <p>{errorMess}</p> </div> </div>}

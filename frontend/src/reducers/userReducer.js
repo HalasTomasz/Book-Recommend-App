@@ -11,6 +11,9 @@ import {
     USER_UPDATE_SUCESS , 
     USER_UPDATE_FAIL,
 
+    USER_RECOMENDATIONS_REQUEST,
+    USER_RECOMENDATIONS_SUCESS,
+    USER_RECOMENDATIONS_FAIL,
 } from '../constants/userConstans'
 
 
@@ -57,6 +60,23 @@ export const userGetterReducer = (state = {user: {}}, action) => {
             return { loading: false, user: action.payload }
 
         case USER_GET_FAIL:
+            return { loading: false, error: action.payload }
+
+        default:
+            return state
+    }
+}
+
+export const userGetterRecomenderReducer = (state = {recomendation: {}}, action) => {
+
+    switch (action.type) {
+        case USER_RECOMENDATIONS_REQUEST:
+            return { loading: true,  ...state }
+
+        case USER_RECOMENDATIONS_SUCESS:
+            return { loading: false, recomendation: action.payload }
+
+        case USER_RECOMENDATIONS_FAIL:
             return { loading: false, error: action.payload }
 
         default:

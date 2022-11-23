@@ -11,6 +11,7 @@ export default function Row({title, list, rowID }) {
     setBooks(list);
   }, [list]);
 
+  {book.map((item, id) => console.log(item)  )}
 
   const slideLeft = () => {
     var slider = document.getElementById('slider' + rowID);

@@ -1,0 +1,70 @@
+Fiction,31638
+Romance,15495
+Fantasy,15046
+Young Adult,11869
+Contemporary,10520
+Nonfiction,8251
+Adult,8246
+Novels,7805
+Mystery,7702
+Historical Fiction,7665
+Audiobook,7307
+Classics,6902
+Adventure,6452
+Historical,6383
+Paranormal,6030
+Literature,5836
+Science Fiction,5374
+Childrens,5226
+Thriller,4587
+Magic,4248
+Humor,4227
+History,3685
+Crime,3675
+Contemporary Romance,3624
+Suspense,3474
+Urban Fantasy,3458
+Middle Grade,3389
+Chick Lit,3358
+Science Fiction Fantasy,3302
+Supernatural,3196
+Biography,3153
+Mystery Thriller,3094
+Paranormal Romance,2912
+Horror,2905
+Teen,2795
+Philosophy,2761
+Adult Fiction,2753
+Short Stories,2613
+Literary Fiction,2522
+Realistic Fiction,2449
+Drama,2419
+Religion,2306
+New Adult,2297
+Memoir,2296
+Erotica,2026
+War,1959
+Vampires,1947
+Christian,1894
+Graphic Novels,1820
+Politics,1764
+Comics,1723
+Family,1706
+Juvenile,1704
+Dystopia,1692
+School,1677
+Psychology,1610
+Poetry,1595
+Biography Memoir,1589
+Spirituality,1486
+High Fantasy,1474
+LGBT,1462
+Historical Romance,1405
+Action,1342
+Self Help,1316
+Science,1298
+Autobiography,1297
+Animals,1279
+Comedy,1164
+Mythology,1085
+Detective,1015

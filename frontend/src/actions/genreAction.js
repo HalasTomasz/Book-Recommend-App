@@ -11,6 +11,10 @@ import {
     GENRE_UPDATE_REQUEST, 
     GENRE_UPDATE_SUCESS, 
     GENRE_UPDATE_FAIL,
+
+    GENRE_LIST_SHORT_REQUEST,
+    GENRE_LIST_SHORT_SUCESS,
+    GENRE_LIST_SHORT_FAIL,
 } from '../constants/genreConstans'
 
 export const listGenre= () => async (dispatch) => {
@@ -26,6 +30,28 @@ export const listGenre= () => async (dispatch) => {
     }catch(error){
         dispatch({
             type: GENRE_LIST_FAIL,
+            payload: error.responose && error.responose.data.message 
+            ? error.responose.data.message
+            : error.message,
+             
+        }) 
+
+    }
+}
+
+export const listGenreShort= () => async (dispatch) => {
+    try{
+        dispatch({type: GENRE_LIST_SHORT_REQUEST})
+        const {data} =  await axios.get('/api/user/shortgenre')
+
+        dispatch({
+            type: GENRE_LIST_SHORT_SUCESS,
+            payload:data
+        })
+
+    }catch(error){
+        dispatch({
+            type: GENRE_LIST_SHORT_FAIL,
             payload: error.responose && error.responose.data.message 
             ? error.responose.data.message
             : error.message,

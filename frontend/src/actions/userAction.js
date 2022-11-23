@@ -11,6 +11,10 @@ import {
     USER_UPDATE_REQUEST, 
     USER_UPDATE_SUCESS , 
     USER_UPDATE_FAIL,
+
+   USER_RECOMENDATIONS_REQUEST,
+    USER_RECOMENDATIONS_SUCESS,
+    USER_RECOMENDATIONS_FAIL,
 } from '../constants/userConstans'
 
 
@@ -78,6 +82,27 @@ export const getUser = (uid) => async (dispatch) => {
     }catch(error){
         dispatch({
             type: USER_GET_FAIL,
+            payload: error.responose && error.responose.data.message 
+            ? error.responose.data.message
+            : error.message,
+             
+        }) 
+
+    }
+}
+
+export const getUserRecomendation = (uid) => async (dispatch) => {
+    try{
+        dispatch({type: USER_RECOMENDATIONS_REQUEST})
+        const {data} =  await axios.get(`/api/user/algo/${uid}`)
+        dispatch({
+            type: USER_RECOMENDATIONS_SUCESS,
+            payload:data
+        })
+
+    }catch(error){
+        dispatch({
+            type: USER_RECOMENDATIONS_FAIL,
             payload: error.responose && error.responose.data.message 
             ? error.responose.data.message
             : error.message,

@@ -12,10 +12,14 @@ class BookReaders(models.Model):
 
 class BookAuthor(models.Model):
     Author_ID = models.AutoField(primary_key=True,editable=False)
-    Author_Name = models.CharField(max_length=255, null = True, blank = True)
+    Author_Name = models.CharField(max_length=350, null = True, blank = True)
 
     def __str__(self):
         return self.Author_Name
+
+class GenreShort(models.Model):
+    Genre_ID = models.AutoField(primary_key=True,editable=False)
+    Genre_Name = models.CharField(max_length=255, null = True, blank = True)
 
 class Genre(models.Model):
     Genre_ID = models.AutoField(primary_key=True,editable=False)
@@ -29,7 +33,7 @@ class Genre(models.Model):
 class UserGenre(models.Model):
     Order_ID = models.AutoField(primary_key=True,editable=False)
     Reader_ID = models.ForeignKey(BookReaders, null = True, on_delete=models.SET_NULL) # here thnik about this 
-    Genre_ID = models.ForeignKey(Genre, null = True, on_delete=models.SET_NULL) # here thnik about this 
+    Genre_ID = models.ForeignKey(GenreShort, null = True, on_delete=models.SET_NULL) # here thnik about this 
 
     @property
     def user_id(self):
@@ -48,7 +52,6 @@ class Book(models.Model):
     Rating = models.DecimalField(max_digits=7, decimal_places=2, null = True, blank = True)
     NumberReviews = models.IntegerField(null=True,blank=True)
     ImgSource = models.TextField(null = True, blank = True)
-    Genre = models.ForeignKey(Genre, null = True, on_delete=models.SET_NULL) # here thnik about this 
 
     def __str__(self):
         return self.Name
@@ -71,3 +74,16 @@ class History(models.Model):
     Date_Taken =  models.DateTimeField(auto_now_add=True)
     Book_ID = models.ForeignKey(Book, null = True, on_delete=models.SET_NULL) # here thnik about this 
     Returned = models.BooleanField(default=False)
+
+class BookGenres(models.Model):
+    NrGenres = models.AutoField(primary_key=True, editable=False)
+    Genre_ID = models.ForeignKey(Genre,null = True,on_delete=models.SET_NULL)
+    Book_ID = models.ForeignKey(Book,null = True,on_delete=models.SET_NULL)
+
+
+class AlgorithmRecomendations(models.Model):
+    NrRecomendations = models.AutoField(primary_key=True, editable=False)
+    Reader_ID = models.ForeignKey(BookReaders,null = True,on_delete=models.SET_NULL)
+    Book_ID = models.ForeignKey(Book,null = True,on_delete=models.SET_NULL)
+    Alogritm_ID = models.IntegerField(null=True,blank=True)
+

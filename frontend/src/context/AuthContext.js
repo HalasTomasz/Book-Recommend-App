@@ -3,6 +3,7 @@ import { auth } from '../firebase';
 import {createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, updateEmail, updatePassword } from "firebase/auth";
 import { registerUser } from "../actions/userAction";
 import {useDispatch } from 'react-redux'
+
 const AuthContext = createContext()
 
 export function useAuth(){
@@ -17,6 +18,7 @@ export function AuthProvider({children}) {
 
     async function signup(email,password, name, age, sex, genres){
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        ///setCurrentUser(userCredential)
         const user = userCredential.user;
         dispatch(registerUser(name, user.uid, age, sex, genres)); // HERE WE CAN ADD GENRE
     }
@@ -49,7 +51,7 @@ export function AuthProvider({children}) {
         })
         return unsub
 
-    },[])
+    }, [])
 
 
 

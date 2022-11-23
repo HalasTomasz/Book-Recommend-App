@@ -48,7 +48,7 @@ function App() {
         <Route path='/history' element={
           <PrivateRoute>
              <Navbar />
-             <HistoryS />
+             <HistoryS /> 
           </PrivateRoute>
           }
         ></Route>

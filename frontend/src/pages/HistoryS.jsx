@@ -24,8 +24,8 @@ export default function HistoryS() {
             <h1 className='flex justify-center text-4xl font-bold pb-6 pt-3'>Book Rental History</h1>
             {user_history.length === 0 ?(
                 <div className='flex justify-center space-x-2 items-center'>
-                    <h2 className='text-2xl'> You dont have any books take</h2>
-                    <Link className='text-base underline' to='/'> Go Back</Link> 
+                    <h2 className='text-2xl'> You don't have any books taken</h2>
+                    <Link className='text-xl underline' to='/'> Go Back</Link> 
                 </div>
                 ) :
                 ( 

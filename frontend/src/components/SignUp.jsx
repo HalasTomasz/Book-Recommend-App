@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import { useAuth } from "../context/AuthContext"
 import {useDispatch, useSelector} from 'react-redux'
 import { Link, useNavigate } from "react-router-dom"
-import { listGenre } from "../actions/genreAction"
+import { listGenreShort } from "../actions/genreAction"
 import Select from 'react-tailwindcss-select'
 
 export default function Signup() {
@@ -14,7 +14,6 @@ export default function Signup() {
   const [errorMess, setError] = useState("")
   const [loadingtype, setLoading] = useState(false)
   const navigate = useNavigate();
-
   const dispatch = useDispatch()
 
   const [userAge, setUserAge] = useState(null);  
@@ -38,11 +37,11 @@ export default function Signup() {
     
      useEffect(() => {
 
-      dispatch(listGenre())
+      dispatch(listGenreShort())
   
     }, [dispatch])
 
-    const genreData = useSelector(state => state.getGenre.genres)
+    const genreData = useSelector(state => state.getShortGenre.genres_short)
     const bookGenres = genreData.map(Genre_Name  => { return {value: Genre_Name.Genre_Name, label:Genre_Name.Genre_Name}});
     console.log(bookGenres)
 
@@ -86,11 +85,9 @@ export default function Signup() {
   }
 
   return (
-
-    <div className='relative w-full h-screen bg-zinc-900/90'>
-        <img src='https://media.istockphoto.com/photos/wooden-brown-books-shelves-with-a-lamp-picture-id1085770318' className="absolute w-full h-full object-cover mix-blend-overlay" />
-       
-        <div className='flex items-center justify-center h-full'>
+    <div className='relative w-full h-auto bg-zinc-900/90'>
+        <img className='absolute w-full h-full object-cover mix-blend-overlay ' src={'https://media.istockphoto.com/photos/wooden-brown-books-shelves-with-a-lamp-picture-id1085770318'} alt="/" />
+        <div className='flex justify-center items-center h-auto p-6 '>
             <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-10'>
                 <h2 className='text-4xl font-bold text-center py-5'>Bibliophile's Tool</h2>
                 {errorMess && <div role="alert"> <div className="border relative border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700"> <p>{errorMess}</p> </div> </div>}
@@ -110,6 +107,10 @@ export default function Signup() {
                     <label className="border-none relative">Username</label>
                     <input className='rounded-lg border relative  bg-gray-100 p-2' type="text" ref={userNameRef} required />
                 </div>
+                <div className='flex flex-col mb-4 border-none relative pb-2'>
+                    <label htmlFor="genre">Genre I enjoy reading</label>
+                    <Select value={userGenre} onChange={handleUserGenreChange} options={bookGenres} isMultiple={true} />
+                </div>
                 <div className='flex flex-col border-none relative pb-2'>
                     <label htmlFor="age">Age</label>
                     <Select value={userAge} onChange={handleUserAgeChange} options={ages} />
@@ -118,18 +119,12 @@ export default function Signup() {
                     <label htmlFor="gender">Sex</label>
                     <Select value={userSex} onChange={handleUserSexChange} options={sex} />
                 </div>
-                <div className='flex flex-col mb-4 border-none relative pb-2'>
-                    <label htmlFor="genre">Genre I enjoy reading</label>
-                    <Select value={userGenre} onChange={handleUserGenreChange} options={bookGenres} isMultiple={true} />
-                </div>
-               
-                
-                <p className="text-center mt-10 border-none relative ">
+                <p className="text-center mt-2 pb-2 border-none relative ">
                     Already have an account? <Link to={"/login"} className="underline"> Log In</Link>
                 </p>
-                <button disabled={loadingtype} onClick={handleSubmit} className='w-full my-5 py-2 border relative bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'>SIGN IN</button>
+                <button disabled={loadingtype} onClick={handleSubmit} className='w-full p-3 border relative bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg justify-center'>SIGN IN</button>
                 
-            </form>
+            </form >
         </div>
     </div>
   )
