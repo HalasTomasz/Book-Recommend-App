@@ -11,8 +11,6 @@ export default function Row({title, list, rowID }) {
     setBooks(list);
   }, [list]);
 
-  {book.map((item, id) => console.log(item)  )}
-
   const slideLeft = () => {
     var slider = document.getElementById('slider' + rowID);
     slider.scrollLeft = slider.scrollLeft - 500;
@@ -37,9 +35,12 @@ export default function Row({title, list, rowID }) {
           id={'slider' + rowID}
           className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'
         >
-          {book.map((item, id) => (
-            <BookSlicer key={id} item={item} />
-          ))}
+          {book.map((item, id) => {
+             if (item.Alogritm_ID === parseInt(rowID,10)) {
+              return <BookSlicer key={id} item={item} />
+             }
+             return null
+          })}
         </div>
         <MdChevronRight
           onClick={slideRight}

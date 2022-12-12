@@ -5,6 +5,7 @@ import {bookListRedcurs, bookDataRedcurs} from './reducers/bookReducers'
 import {getListHistoryReducer, setListHistoryReducer, updateListHistoryReducer} from './reducers/historyReducer'
 import {userRegisterReducer,userGetterReducer,userUpdateReducer, userGetterRecomenderReducer } from './reducers/userReducer'
 import { getGenreListRedcurs, getGenreUserRedcurs, updateGenreUserRedcurs, getGenreListShortRedcurs } from './reducers/genreReducer'
+import {reviewAdderReducer} from './reducers/ReviewRecuder'
 
 const reducer = combineReducers({
 
@@ -17,14 +18,17 @@ const reducer = combineReducers({
     getUserHistory: getListHistoryReducer,
     setUserHistory: setListHistoryReducer,
     returnBookUserHistory:updateListHistoryReducer,
-    getUserGenre:getGenreUserRedcurs,
+
     getGenre:getGenreListRedcurs,
     updateUserGenre:updateGenreUserRedcurs,
 
     userRegister: userRegisterReducer,
     getUser: userGetterReducer,
     updateUser:userUpdateReducer,
+
+    addReview:reviewAdderReducer,
 })
+//    getUserGenre:getGenreUserRedcurs,
 
 
 

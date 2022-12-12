@@ -43,7 +43,7 @@ export const registerUser = (name, uid, age,sex, genres) => async (dispatch) => 
     }
 }
 
-export const updateUser = (name, uid, age, sex, genres) => async (dispatch) => {
+export const updateUser = (name, uid, age, sex) => async (dispatch) => {
   
     try {
        
@@ -51,7 +51,7 @@ export const updateUser = (name, uid, age, sex, genres) => async (dispatch) => {
 
         const { data } = await axios.put(
             `/api/users/update/${uid}`,
-            { 'name': name, 'uid': uid, 'age': age, 'sex':sex, 'genres':genres}
+            { 'name': name, 'uid': uid, 'age': age, 'sex':sex}
         )
 
         dispatch({
@@ -97,7 +97,7 @@ export const getUserRecomendation = (uid) => async (dispatch) => {
         const {data} =  await axios.get(`/api/user/algo/${uid}`)
         dispatch({
             type: USER_RECOMENDATIONS_SUCESS,
-            payload:data
+            payload: data
         })
 
     }catch(error){

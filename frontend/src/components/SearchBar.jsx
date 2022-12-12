@@ -19,7 +19,7 @@ export default function SearchBar() {
         const wordWeLookFor = event.target.value;
         setWords(wordWeLookFor); 
         const newFilter = books.filter((value) => {
-          return value.Name.toLowerCase().includes(words.toLowerCase());
+            return value.Name.toLowerCase().includes(words.toLowerCase());
         })
         console.log(newFilter)
         if (wordWeLookFor === "") {
@@ -57,7 +57,7 @@ export default function SearchBar() {
               <div className="bg-white  overflow-hidden">
                 {filterOnData.slice(0, 8).map((value, key) => {
                   return (
-                    <a className="" href={`/books/${value.Book_ID}`} >
+                    <a key={key} className="" href={`/books/${value.Book_ID}`}>
                       <p>{value.Name} </p>
                     </a>
                   );

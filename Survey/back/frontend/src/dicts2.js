@@ -1,0 +1,53 @@
+export const dicts2 = {
+    'Harry Potter and the Sorcerer`s Stone':['Harry Potter and the Chamber of Secrets \n', 'Harry Potter and the Prisoner of Azkaban \n', 'Harry Potter Boxed Set, Books 1-5 (Harry Potter, #1-5) \n', 'Harry Potter and the Half-Blood Prince \n', 'Harry Potter and the Goblet of Fire'],
+    'The Hunger Games':['SAMPLER ONLY: Catching Fire (The Hunger Games, #2) \n', 'Mockingjay \n', 'Catching Fire \n', 'Guide to The Hunger Games \n', 'The Hunger Games Tribute Guide'],
+    'Twilight':['The Twilight Saga Complete Collection \n', 'Twilight Watch \n', 'The Twilight Collection \n', 'Twilight and Philosophy: Vampires, Vegetarians, and the Pursuit of Immortality \n', 'Twilight and History']
+    ,'To Kill a Mockingbird':['Go Set a Watchman \n', "Harper Lee's To Kill a Mockingbird \n", 'Prizes \n', '...And Ladies of the Club \n', "The Snowman's Children"],
+    'The Great Gatsby':['Trimalchio \n', 'F. Scott Fitzgerald: The Great Gatsby: Essays, Articles, Reviews \n', 'Flappers and Philosophers \n', 'Broken Circle \n', 'The Christmas Fix']
+    ,'The Fault in Our Stars':['Breadcrumbs \n', 'A Spoonful of Murder \n', 'Pretty Little Devils \n', 'Hazel Green \n', "Josh and Hazel's Guide to Not Dating"],
+    '1984':["George Orwell Omnibus: The Complete Novels: Animal Farm, Burmese Days, A Clergyman's Daughter, Coming up for Air, Keep the Aspidistra Flying, and Nineteen Eighty-Four \n", 'We \n', 'A Collection of Essays \n', 'Homage to Catalonia \n', 'The Ministry of Truth: The Biography of George Orwell\'s "1984"']
+    ,'Pride and Prejudice':["Mr. Darcy Presents His Bride: A Sequel to Jane Austen's Pride and Prejudice \n", "Darcy's Story \n", 'Mr. Fitzwilliam Darcy, The Last Man in the World: A Pride and Prejudice Variation \n', 'Dating Mr. Darcy \n', 'Pride and Prejudice and Zombies'],
+    'Divergent':['Insurgent \n', 'Allegiant \n', 'Divergent Series Box Set \n', 'Four: A Divergent Story Collection \n', 'The Traitor'],
+    'The Hobbit, or There and Back Again':['The Hobbit: Graphic Novel \n', 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings \n', 'The Hobbit, Part One \n', 'The Lord of the Rings \n', 'The Children of Hurin/The Silmarillion/The Hobbit/The Lord of the Rings']
+    ,'Harry Potter and the Deathly Hallows':['Harry Potter and the Half-Blood Prince \n', 'Harry Potter Boxed Set, Books 1-5 (Harry Potter, #1-5) \n', 'The End of Harry Potter? \n', 'The Harry Potter Collection 1-4 \n', 'The Harry Potter trilogy'],
+    'Harry Potter and the Prisoner of Azkaban':['Harry Potter and the Chamber of Secrets \n', "Harry Potter and the Sorcerer's Stone \n", 'Harry Potter and the Order of the Phoenix \n', 'Harry Potter Boxed Set, Books 1-5 (Harry Potter, #1-5) \n', 'Harry Potter and the Half-Blood Prince']
+    ,'The Diary of a Young Girl':["Anne Frank's Tales from the Secret Annex: A Collection of Her Short Stories, Fables, and Lesser-Known Writings \n", 'The Last Seven Months of Anne Frank \n', 'Anne Frank: A Hidden Life \n', 'The Boy Who Loved Anne Frank \n', 'Anne Frank (National Geographic Readers)']
+    ,'Animal Farm':['Animal Farm / 1984 \n', "Kerri's War \n", 'The Christmas Fix \n', 'The Swordswoman \n', 'Farm Sanctuary: Changing Hearts and Minds About Animals and Food'],
+    'The Catcher in the Rye':['The Catcher in the Rye and Philosophy \n', 'The Realm of Possibility \n', 'Rule of the Bone \n', "Holden's Performance: A Novel \n", 'The Complete Uncollected Stories']
+    ,'Harry Potter and the Chamber of Secrets':["Harry Potter and the Sorcerer's Stone \n", 'Harry Potter and the Prisoner of Azkaban \n', 'Harry Potter Boxed Set, Books 1-5 (Harry Potter, #1-5) \n', 'The Harry Potter Collection 1-4 \n', 'Harry Potter Collection']
+    ,'Angels & Demons':['The Lost Symbol \n', 'The Da Vinci Code \n', 'The Da Vinci Code (the Young Adult Adaptation) \n', 'The Aylesford Skull \n', 'Mistress of the Vatican: The True Story of Olimpia Maidalchini: The Secret Female Pope'],
+    'The Girl with the Dragon Tattoo':['The Millennium Trilogy (Millennium Trilogy, #1-3) \n', "The Girl Who Kicked the Hornet's Nest \n", 'The Girl Who Played with Fire \n', '"There Are Things I Want You to Know" about Stieg Larsson and Me \n', "The Girl in the Spider's Web"]
+    ,'Harry Potter and the Goblet of Fire':['Harry Potter Boxed Set, Books 1-5 (Harry Potter, #1-5) \n', 'Harry Potter and the Chamber of Secrets \n', 'The Harry Potter Collection 1-4 \n', 'The Harry Potter trilogy \n', 'Harry Potter Schoolbooks Box Set: Two Classic Books from the Library of Hogwarts School of Witchcraft and Wizardry']
+    ,'Catching Fire':['SAMPLER ONLY: Catching Fire (The Hunger Games, #2) \n', 'Mockingjay \n', 'The Hunger Games \n', 'Guide to The Hunger Games \n', 'The Hunger Games Tribute Guide'],
+    'Harry Potter and the Order of the Phoenix':['Harry Potter and the Chamber of Secrets \n', 'Harry Potter and the Prisoner of Azkaban \n', "Harry Potter and the Sorcerer's Stone \n", 'Harry Potter Schoolbooks Box Set: Two Classic Books from the Library of Hogwarts School of Witchcraft and Wizardry \n', 'Harry Potter and the Goblet of Fire']
+    ,'Harry Potter and the Half-Blood Prince':['Harry Potter and the Chamber of Secrets \n', "Harry Potter and the Sorcerer's Stone \n", 'Harry Potter and the Prisoner of Azkaban \n', 'Harry Potter Boxed Set, Books 1-5 (Harry Potter, #1-5) \n', 'Harry Potter and the Deathly Hallows'],
+    'The Kite Runner':['A Thousand Splendid Suns \n', 'Once a Runner \n', 'The Kite Runner: A Portrait of the Marc Forster Film \n', 'The Maze Runner Files \n', 'The Kite Runner: Graphic Novel'],
+    'The Fellowship of the Ring':['The Lord of the Rings \n', 'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings \n', 'The Two Towers \n', 'Emily Windsnap and the Castle in the Mist \n', 'Loop']
+    ,'Mockingjay':['SAMPLER ONLY: Catching Fire (The Hunger Games, #2) \n', 'Catching Fire \n', 'The Hunger Games \n', 'The Hunger Games Trilogy Boxset \n', 'Guide to The Hunger Games'],
+    'Gone Girl':["I Know It's Over \n", "The Demon's Lexicon \n", 'Pop. 1280 \n', 'Breathing Underwater \n', 'Elephant Run'],
+    'Lord of the Flies':["Interpreting the Parables: God's Good News for the World \n", 'The Longest Winter \n', 'Blood Crazy \n', 'The Oath \n', 'Confessor']
+    ,'The Help':["Captivating: Unveiling the Mystery of a Woman's Soul \n", 'Lean In: Women, Work, and the Will to Lead \n', 'Husband \n', 'Twelve Extraordinary Women: How God Shaped Women of the Bible, and What He Wants to Do with You \n', 'Why I Love Black Women']
+    ,'The Lion, the Witch and the Wardrobe':['The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #1) \n', "The Magician's Nephew / The Lion, The Witch and the Wardrobe / The Horse and His Boy \n", 'The Chronicles of Narnia \n', 'The Voyage of the Dawn Treader \n', 'The Silver Chair']
+    ,'The Girl on the Train':["The Dead Wife's Handbook \n", 'Summer of Fear \n', 'Cloud Walking \n', 'You Had Me At Hello \n', 'Something Borrowed'],
+    'The Alchemist':['Darkness Avenged \n', "The Sheriff's Catch \n", 'The Pilgrimage \n', 'Warrior of the Light \n', 'Necessary Evil'],
+    'Romeo and Juliet':['Juliet Immortal \n', "Romeo's Ex: Rosaline's Story \n", 'When You Were Mine \n', 'Romeo Redeemed \n', 'Calling Romeo']
+    ,'The Lovely Bones':["It's Not About Him \n", 'Secret Seven Win Through \n', 'Eye for Eye \n', 'Killing Grounds \n', 'Diary of a Wimpy Kid: #1-5 [Box Set]']
+    ,'A Game of Thrones':['A Game of Thrones / A Clash of Kings \n', 'A Clash of Kings \n', 'A Storm of Swords \n', 'A Song of Ice and Fire \n', 'BookRags Summary: A Storm of Swords']
+    ,'The Lightning Thief':['Percy Jackson and the Olympians \n', 'The Sea of Monsters: The Graphic Novel \n', 'The Last Olympian \n', 'The House of Hades \n', "Demigods and Monsters: Your Favorite Authors on Rick Riordan's Percy Jackson and the Olympians Series"]
+    ,'Fifty Shades of Grey':['Fifty Shades Trilogy \n', 'Fifty Shades Freed \n', 'Grey and Darker \n', 'Grey \n', 'Fifty Shades Duo: Fifty Shades Darker / Fifty Shades Freed'],
+    'Of Mice and Men':['The Sky Is Everywhere \n', 'The Long Valley \n', 'East of Eden \n', 'The Winter of Our Discontent \n', 'Journal of a Novel: The East of Eden Letters'],
+    'The Da Vinci Code':['The Da Vinci Code (the Young Adult Adaptation) \n', 'The Lost Symbol \n', "Breaking the Da Vinci Code: Answers to the Questions Everyone's Asking \n", 'Angels & Demons \n', "The Devil's Chord"]
+    ,'The Book Thief':['Avatar Volume 4: The Last Airbender \n', 'Jim Butcher Box Set \n', 'Inequality Matters: The Growing Economic Divide in America and Its Poisonous Consequences \n', 'The Glass Room \n', 'The Christmas Fix']
+    ,'The Giver':["Lion's Heat \n", "Pity Isn't an Option \n", 'Her Secret \n', 'Finally \n', 'Writing Dark Stories: How to Write Horror and Other Disturbing Short Stories'],
+    'Memoirs of a Geisha':['Geisha, a Life \n', 'Autobiography of a Geisha \n', 'Filthy Beautiful Lies \n', 'Dirty Deeds \n', 'Snow Country'],
+    'Little Women':['A Modern Cinderella \n', 'Louisa May Alcott: The Woman Behind Little Women \n', "Little Women, Little Men, Jo's Boys \n", 'Work: A Story of Experience \n', 'March']
+    ,'Fahrenheit 451':["The Fireman's Wife \n", 'The Electronic Mind Reader \n', 'The Worst Witch All at Sea \n', 'The Worst Witch Saves the Day \n', 'The Worst Witch and the Wishing Star']
+    ,'Jane Eyre':['Jane \n', 'My Plain Jane \n', 'Jane Steele \n', 'The Afterdeath Journal of an American Philosopher; The World View of William James \n', 'The Waiting Sky'],
+    'City of Bones':['The Mortal Instruments \n', 'The Mortal Instruments Boxed Set: City of Bones; City of Ashes; City of Glass \n', 'City of Fallen Angels \n', 'City of Glass \n', 'City of Ashes']
+    ,'The Time Traveler`s Wife': ['Ghost Layer \n', 'Laugh with the Moon \n', 'Divine Evil \n', 'On What Grounds \n', 'Treasure'],
+    'Eat, Pray, Love':['Committed: A Skeptic Makes Peace with Marriage \n', 'The Foremost Good Fortune \n', 'Big Magic: Creative Living Beyond Fear \n', "What's Eating Gilbert Grape \n", 'Love Your Life: Living Happy, Healthy and Whole']
+    ,'New Moon':['Midnight Sun \n', 'Eclipse \n', 'Twilight: The Graphic Novel, Vol. 2 \n', 'Breaking Dawn \n', 'Twilight: The Graphic Novel, Vol. 1'],
+    'The Handmaid`s Tale':['The Testaments \n', 'Unexpected Circumstances \n', 'The Breadwinner \n', 'The Heart Goes Last \n', 'The Glass Arrow'],
+    'Brave New World':['Brave New World / Brave New World Revisited \n', 'We \n', 'After Many a Summer Dies the Swan \n', 'Point Counter Point \n', 'Between Heaven & Hell']
+    ,
+};

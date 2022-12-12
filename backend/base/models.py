@@ -87,3 +87,9 @@ class AlgorithmRecomendations(models.Model):
     Book_ID = models.ForeignKey(Book,null = True,on_delete=models.SET_NULL)
     Alogritm_ID = models.IntegerField(null=True,blank=True)
 
+
+class OFFTOP_Recomendations(models.Model):
+    NrRecomendations = models.AutoField(primary_key=True, editable=False)
+    Book_ID = models.ForeignKey(Book,null = True,on_delete=models.SET_NULL)
+    Alogritm_ID = models.IntegerField(null=True,blank=True)
+

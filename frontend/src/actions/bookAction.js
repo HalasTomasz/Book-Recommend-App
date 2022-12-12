@@ -30,11 +30,14 @@ export const listBooks = () => async (dispatch) => {
     }
 }
 
-export const listBookData = (id) => async (dispatch) => {
+export const listBookData = (id, uid) => async (dispatch) => {
     try{
         dispatch({type: BOOK_DATA_REQUEST})
-        const {data} =  await axios.get(`/api/books/${id}`)
-        console.log({data})
+        const {data} =  await axios.get(`/api/books/${id}`,  {
+            params: {
+                user: uid
+            }
+        })
         dispatch({
             type: BOOK_DATA_SUCESS,
             payload: data

@@ -1,0 +1,350 @@
+'The Little Prince': 'Book_ID
+128                The Godfather
+95       The Old Man and the Sea
+6352        The Emperor's Blades
+107     And Then There Were None
+105              Clockwork Angel
+Name: Name, dtype: object', 
+'Harry Potter and the Order of the Phoenix': 'Book_ID
+4813                     The Starbirth Assignment: Shifter
+323                                       Franny and Zooey
+221                                          The Lost Hero
+26656    Principia Discordia ● Or ● How I Found Goddess...
+21849                                  Finding Forgiveness
+Name: Name, dtype: object', 
+'The Book Thief': 'Book_ID
+2732                   Meeting With Christ and Other Poems
+7238                            All Families are Psychotic
+470                                              The Pearl
+17310    Lean Hospitals: Improving Quality, Patient Saf...
+27059                                  Desperate Hoodwives
+Name: Name, dtype: object', 
+'Pride and Prejudice': 'Book_ID
+2602                 History of the Peloponnesian War
+34603                          Washington Goes to War
+34780    Akiko: The Menace of Alia Rellapor, Volume 1
+4165                   A Knight of the Seven Kingdoms
+28273                       The Night the Angels Came
+Name: Name, dtype: object', 
+'City of Bones': 'Book_ID
+33259                                    The Runaway Dolls
+18299    Justine, Philosophy in the Bedroom, and Other ...
+12760                              Runaways Deluxe, Vol. 1
+9960     Fluid: The Approach Applied by Geniuses Over C...
+26886                                   Chateau of Flowers
+Name: Name, dtype: object', 
+'The Hitchhiker's Guide to the Galaxy': 'Book_ID
+13535        Look to Windward
+31962                  Maxims
+25869         Total Surrender
+19630                   Other
+23823    All Our Wrong Todays
+Name: Name, dtype: object', 
+'The Color Purple': 'Book_ID
+15712                             The French Mathematician
+846                                               The Pact
+12705                                                 Heat
+2486                                     My Blood Approves
+23845    Absolutely Small: How Quantum Theory Explains ...
+Name: Name, dtype: object', 
+'Twilight': 'Book_ID
+17417    100 Ways to Motivate Yourself: Change Your Lif...
+30485                                        Dark Champion
+10547                                  If I Ran the Circus
+26540                                      Chobits, Vol. 2
+2158     Sex, Drugs, and Cocoa Puffs: A Low Culture Man...
+Name: Name, dtype: object', 
+'Lord of the Flies': 'Book_ID
+153                  The Thorn Birds
+332                   Eleanor & Park
+10612                   The Etruscan
+1296                    Bone Crossed
+6930     At the Edge of the Universe
+Name: Name, dtype: object', 
+'The Compleat Works of Wllm Shkspr (abridged)': 'Book_ID
+1776                                               Anathem
+10                                      Gone with the Wind
+3471                                   As Sure as the Dawn
+335                                          Me Before You
+14597    The Great Influenza: The Story of the Deadlies...
+Name: Name, dtype: object', 
+'One Flew Over the Cuckoo's Nest': 'Book_ID
+107                    And Then There Were None
+6352                       The Emperor's Blades
+29088    India Black and the Shadows of Anarchy
+1534                               The Egyptian
+6009                           The Raven Prince
+Name: Name, dtype: object', 
+'The Old Man and the Sea': 'Book_ID
+128                The Godfather
+34             The Little Prince
+3          To Kill a Mockingbird
+6352        The Emperor's Blades
+107     And Then There Were None
+Name: Name, dtype: object', 
+'Delirium': 'Book_ID
+16789        Water Runs Red
+24170     My Sister's Voice
+25402         Bound By Lies
+23928    To Seduce a Sinner
+36469              l8r, g8r
+Name: Name, dtype: object', 
+'The Chronicles of Narnia': 'Book_ID
+953                                            Fingersmith
+5510                        The Storied Life of A.J. Fikry
+26886                                   Chateau of Flowers
+36607                                     Breaking Bennett
+14164    How to Train Your Viking, by Toothless the Dragon
+Name: Name, dtype: object', 
+'The Princess Bride': 'Book_ID
+36171                                Tall, Dark, and Cajun
+7306                                          Split Second
+8143     The Secret Life of Plants: A Fascinating Accou...
+33217                                      Love Me Forever
+27556                                       So Down I Fall
+Name: Name, dtype: object', 
+'The Godfather': 'Book_ID
+34            The Little Prince
+95      The Old Man and the Sea
+6352       The Emperor's Blades
+1534               The Egyptian
+2168                End of Days
+Name: Name, dtype: object', 
+'Just Listen': 'Book_ID
+450                                            Neuromancer
+16                                     Memoirs of a Geisha
+16769                         Daughters of Northern Shores
+36726    Steps to an Ecology of Mind: Collected Essays ...
+22035                                       The Echo Maker
+Name: Name, dtype: object', 
+'Rebecca': 'Book_ID
+821                            The Story of Edgar Sawtelle
+262                                     The Secret History
+187                                        The Maze Runner
+24000                                     Bitter Chocolate
+4980     Jesus Freaks: Stories of Those Who Stood for J...
+Name: Name, dtype: object', 
+'Clockwork Angel': 'Book_ID
+6352    The Emperor's Blades
+128            The Godfather
+1534            The Egyptian
+6009        The Raven Prince
+9772      The Darkest Secret
+Name: Name, dtype: object', 
+'The Lost Hero': 'Book_ID
+4813                     The Starbirth Assignment: Shifter
+323                                       Franny and Zooey
+2                Harry Potter and the Order of the Phoenix
+26656    Principia Discordia ● Or ● How I Found Goddess...
+21849                                  Finding Forgiveness
+Name: Name, dtype: object', 
+'To Kill a Mockingbird': 'Book_ID
+128               The Godfather
+95      The Old Man and the Sea
+34            The Little Prince
+9772         The Darkest Secret
+105             Clockwork Angel
+Name: Name, dtype: object', 
+'And Then There Were None': 'Book_ID
+128                       The Godfather
+34                    The Little Prince
+95              The Old Man and the Sea
+6352               The Emperor's Blades
+73      One Flew Over the Cuckoo's Nest
+Name: Name, dtype: object', 
+'The Handmaid's Tale': 'Book_ID
+46                                       A Wrinkle in Time
+11198    Just Between You and Me: A Novel of Losing Fea...
+7272                                      Riotous Assembly
+25928                                               Baby V
+16015                               Icarus and Other Poems
+Name: Name, dtype: object', 
+'The Girl with the Dragon Tattoo': 'Book_ID
+335                               Me Before You
+10                           Gone with the Wind
+599      One Day in the Life of Ivan Denisovich
+7579                                Air Awakens
+32944                         Dispensationalism
+Name: Name, dtype: object', 
+'Franny and Zooey': 'Book_ID
+4813                     The Starbirth Assignment: Shifter
+221                                          The Lost Hero
+2                Harry Potter and the Order of the Phoenix
+185                              Oh, the Places You'll Go!
+26656    Principia Discordia ● Or ● How I Found Goddess...
+Name: Name, dtype: object', 
+'Blood River: A Journey to Africa's Broken Heart': 'Book_ID
+13312    The Voices of a Distant Star
+11486         The Drawing of the Dark
+10566            The Butterfly Effect
+8425                         Juliette
+10939                  River of Stars
+Name: Name, dtype: object', 
+'Romeo and Juliet': 'Book_ID
+34792    My First Summer in the Sierra
+15923                      Deep Winter
+10805                     Dragon's Egg
+3337                         White Cat
+3952        Moreta: Dragonlady of Pern
+Name: Name, dtype: object', 
+'Anne of Green Gables': 'Book_ID
+7300                         What Happens in London
+8192     I Am Funny Like That: A Funny Look At Life
+32303                                    Speculator
+31575                          When Breaks the Dawn
+35406                             The Silver Branch
+Name: Name, dtype: object', 
+'Watchmen': 'Book_ID
+19371                A Short History of the Girl Next Door
+10155                  Are We All Lemmings and Snowflakes?
+9        J.R.R. Tolkien 4-Book Boxed Set: The Hobbit an...
+456                                              Dubliners
+593                                        A Monster Calls
+Name: Name, dtype: object', 
+'Ficciones': 'Book_ID
+34144    Startled by His Furry Shorts
+8141                  Accidental Love
+37279                   The Wanderers
+5871            The Prince of Thieves
+1123                 Born at Midnight
+Name: Name, dtype: object', 
+'Crime and Punishment': 'Book_ID
+18909                    The Reluctant Mage
+16673                 Breathing Under Water
+4453     Holy Bible: New Living Translation
+4518                   Chasing the Prophecy
+19124                             Fools Die
+Name: Name, dtype: object', 
+'The Alchemist': 'Book_ID
+7077                      Out of the Easy
+9865                   Wherever Nina Lies
+8956                    Birth of a Killer
+13585          The Night Life of the Gods
+26624    The Complete Chronicles of Conan
+Name: Name, dtype: object', 
+'The Outsiders': 'Book_ID
+18323              Death Around the Corner
+29686                         Monkey Beach
+1542     The Seven Husbands of Evelyn Hugo
+31692                Twice Upon a Marigold
+17102           Diary of a Provincial Lady
+Name: Name, dtype: object', 
+'The Adventures of Huckleberry Finn': 'Book_ID
+9204                              Shattered Souls
+248                        The Sound and the Fury
+195                          The Canterbury Tales
+1610      By the River Piedra I Sat Down and Wept
+19028    Looking for Salvation at the Dairy Queen
+Name: Name, dtype: object', 
+'The Secret Garden': 'Book_ID
+972                      Tales of H.P. Lovecraft
+27616    True Confessions of a Hollywood Starlet
+144                  The Little House Collection
+444                                    Shantaram
+6753                               Love That Dog
+Name: Name, dtype: object', 
+'The Clan of the Cave Bear': 'Book_ID
+1079     The Spy Who Came In from the Cold
+353                          Cold Mountain
+28081                          Slade House
+2358                                  Wool
+29299                              Hebbros
+Name: Name, dtype: object', 
+'The Time Traveler's Wife': 'Book_ID
+1132     The Diamond Age: Or, A Young Lady's Illustrate...
+14813                          On Liberty and Other Essays
+383                                            Cloud Atlas
+1166                                      Among the Hidden
+25422    The Children of Old Leech: A Tribute to the Ca...
+Name: Name, dtype: object', 
+'Memoirs of a Geisha': 'Book_ID
+16769                         Daughters of Northern Shores
+450                                            Neuromancer
+36866    I Contain Multitudes: The Microbes Within Us a...
+520                                            Just Listen
+24267                            A Hundred and One Reasons
+Name: Name, dtype: object', 
+'Animal Farm': 'Book_ID
+25730                  Dusan
+17638    M Is for Mama's Boy
+35083             The Seance
+25232     Hollywood Husbands
+26886     Chateau of Flowers
+Name: Name, dtype: object', 
+'Catch-22': 'Book_ID
+25675                                    God's Ear: A Play
+32392    The One Minute Millionaire: The Enlightened Wa...
+16669                                         Unapologetic
+5054                                               Scorpia
+28038    Mayo Clinic Guide to Your Baby's First Year: F...
+Name: Name, dtype: object', 
+'The Picture of Dorian Gray': 'Book_ID
+4589     Incidents in the Life of a Slave Girl
+19185                           Desolate Angel
+11432             The Mad Scientist's Daughter
+36963                               Blood Bond
+2641                                    Verity
+Name: Name, dtype: object', 
+'The Bell Jar': 'Book_ID
+20314    Where Wizards Stay Up Late: The Origins of the...
+33937                       Mothering Your Nursing Toddler
+9654                                                   Lit
+32634                                                 Swag
+2325                                     Emily of New Moon
+Name: Name, dtype: object', 
+'Divergent': 'Book_ID
+34317                      The Dog Who Knew Too Much
+26859                           Capture Me & Bind Me
+36315                                 The Day We Met
+36256    The World in Vogue: People, Parties, Places
+23166                              Mad About the Boy
+Name: Name, dtype: object', 
+'Les Misérables': 'Book_ID
+6600                                     Empress
+26508    Invincible: Ultimate Collection, Vol. 5
+10255                      How Hard Can Love Be?
+23945                                    Bad Men
+19938                    The Collector of Worlds
+Name: Name, dtype: object', 
+'Ender's Game': 'Book_ID
+3855                 The Physick Book of Deliverance Dane
+518                                    The Woman in White
+238                              Man's Search for Meaning
+517     The Mortal Instruments Boxed Set: City of Bone...
+681                    The No. 1 Ladies' Detective Agency
+Name: Name, dtype: object', 
+'Dracula': 'Book_ID
+27183                                         Fast Forward
+30142                                   The Forbidden Tomb
+27835                                      Damian's Oracle
+24352         Flight 232: A Story of Disaster and Survival
+28356    Jules Verne: Seven Novels (Extraordinary Voyag...
+Name: Name, dtype: object', 
+'Their Eyes Were Watching God': 'Book_ID
+6335     Emotional Intelligence: Why It Can Matter More...
+17712                                      Pulling Princes
+3810                               The Story of a New Name
+5621               Understanding Comics: The Invisible Art
+22752                                              Manseed
+Name: Name, dtype: object', 
+'The 100-Year-Old Man Who Climbed Out the Window and Disappeared': 'Book_ID
+7035    The Color Code: A New Way to See Yourself, You...
+1081                                    Les Fleurs du Mal
+8900                                                Crave
+1085                                     The Angel's Game
+3204                                   The Demolished Man
+Name: Name, dtype: object', 
+'The Giver': 'Book_ID
+5039     Sorcery & Cecelia: or The Enchanted Chocolate Pot
+31202                            Jeannie Out of the Bottle
+24702                                            The Loser
+12285                                   All We Ever Wanted
+16340    Transformation of the Psyche: The Symbolic Alc...
+Name: Name, dtype: object', 
+'One Hundred Years of Solitude': 'Book_ID
+1021               Before I Go to Sleep
+846                            The Pact
+11669                   Because of Anya
+3967                          Sea Glass
+17422    In the Shadow of the Mountains
+Name: Name, dtype: object', 

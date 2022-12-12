@@ -29,11 +29,9 @@ export const bookListRedcurs= (state = {books: []}, action) =>{
 export const bookDataRedcurs= (state = {book: {}}, action) =>{
     switch(action.type){
         case BOOK_DATA_REQUEST:
-            console.log(action.payload)
             return {loading: true, ...state}
 
         case BOOK_DATA_SUCESS:
-            console.log(action.payload)
             return {loading: false, book: action.payload}
         
         case BOOK_DATA_FAIL:

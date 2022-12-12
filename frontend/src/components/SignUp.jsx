@@ -6,6 +6,9 @@ import { listGenreShort } from "../actions/genreAction"
 import Select from 'react-tailwindcss-select'
 
 export default function Signup() {
+  
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -13,24 +16,22 @@ export default function Signup() {
   const {signup} = useAuth()
   const [errorMess, setError] = useState("")
   const [loadingtype, setLoading] = useState(false)
-  const navigate = useNavigate();
-  const dispatch = useDispatch()
 
   const [userAge, setUserAge] = useState(null);  
   const ages = [
-    {value: "16", label: "🦊 0-16"},
-    {value: "26", label: "🦋 16-26"},
-    {value: "40", label: "🐝 26-40"},
-    {value: "60", label: "🐝 40-60"},
-    {value: "200", label: "🐝 60-∞"},
-    {value: "0", label: "🦊 Don't want to say"},
+    {value: "16", label: "0-16"},
+    {value: "26", label: "16-26"},
+    {value: "40", label: "26-40"},
+    {value: "60", label: "40-60"},
+    {value: "200", label: "60-∞"},
+    {value: "0", label: "Don't want to say"},
     ];
 
   const [userSex, setUserSex] = useState(null);  
   const sex = [
-    {value: "Man", label: "🦊 Man"},
-    {value: "Woman", label: "🦋 Woman"},
-    {value: "No", label: "🐝 Don't want to say"},
+    {value: "Man", label: "Man"},
+    {value: "Woman", label: "Woman"},
+    {value: "No", label: "Don't want to say"},
     ];
 
     const [userGenre, setUserGenre] = useState(null);  
@@ -85,9 +86,10 @@ export default function Signup() {
   }
 
   return (
-    <div className='relative w-full h-auto bg-zinc-900/90'>
-        <img className='absolute w-full h-full object-cover mix-blend-overlay ' src={'https://media.istockphoto.com/photos/wooden-brown-books-shelves-with-a-lamp-picture-id1085770318'} alt="/" />
-        <div className='flex justify-center items-center h-auto p-6 '>
+    <div className="relative w-full h-screen">
+    <div className='w-full h-auto min-h-full bg-zinc-900/90'>
+      <img className=' absolute w-full h-full min-h-full object-cover mix-blend-overlay overflow-hidden' src={'https://media.istockphoto.com/photos/wooden-brown-books-shelves-with-a-lamp-picture-id1085770318'} alt="/" />
+        <div className='flex items-center justify-center h-auto pt-3 pb-2'>
             <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-10'>
                 <h2 className='text-4xl font-bold text-center py-5'>Bibliophile's Tool</h2>
                 {errorMess && <div role="alert"> <div className="border relative border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700"> <p>{errorMess}</p> </div> </div>}
@@ -119,13 +121,14 @@ export default function Signup() {
                     <label htmlFor="gender">Sex</label>
                     <Select value={userSex} onChange={handleUserSexChange} options={sex} />
                 </div>
-                <p className="text-center mt-2 pb-2 border-none relative ">
+                <p className="text-center pb-2 border-none relative ">
                     Already have an account? <Link to={"/login"} className="underline"> Log In</Link>
                 </p>
                 <button disabled={loadingtype} onClick={handleSubmit} className='w-full p-3 border relative bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg justify-center'>SIGN IN</button>
                 
             </form >
         </div>
+    </div>
     </div>
   )
 }

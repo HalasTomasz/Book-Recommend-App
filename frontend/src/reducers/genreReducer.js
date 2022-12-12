@@ -40,13 +40,13 @@ export const getGenreListShortRedcurs= (state = {genres_short: []}, action) =>{
     switch(action.type){
         case GENRE_LIST_SHORT_REQUEST:
 
-            return {loading: true, genres_short: []}
+            return {loading_genre: true, genres_short: []}
 
         case GENRE_LIST_SHORT_SUCESS:
-            return {loading: false, genres_short: action.payload}
+            return {loading_genre: false, genres_short: action.payload}
         
         case GENRE_LIST_SHORT_FAIL:
-            return {loading: false, error: action.payload}
+            return {loading_genre: false, error_genre: action.payload}
         
         default:
             return state 

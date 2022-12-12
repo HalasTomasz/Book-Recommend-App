@@ -12,7 +12,7 @@ export default function HistoryS() {
     const location = useLocation()
     const user_id = location.state ? Number(location.state) : 1
     const dispatch = useDispatch()
-    const user_history = useSelector(state => state.getUserHistory.user_history)
+    const {loading,error, user_history} = useSelector(state => state.getUserHistory)
     //const {error,loading, user_history} = history
 
     useEffect(()=> {
@@ -21,6 +21,8 @@ export default function HistoryS() {
 
   return (
       <div className='bg-gray-500 h-screen'>
+        {!loading &&
+            <div>
             <h1 className='flex justify-center text-4xl font-bold pb-6 pt-3'>Book Rental History</h1>
             {user_history.length === 0 ?(
                 <div className='flex justify-center space-x-2 items-center'>
@@ -32,7 +34,8 @@ export default function HistoryS() {
                 <div className=''>
                     <HistoryRow list = {user_history} />
                 </div>
-            )}
+            )}</div>
+            }
     </div>
   );
 };

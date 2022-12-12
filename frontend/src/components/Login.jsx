@@ -32,7 +32,7 @@ export default function Login() {
     <div className='relative w-full h-screen bg-zinc-900/90'>
         <img src='https://media.istockphoto.com/photos/wooden-brown-books-shelves-with-a-lamp-picture-id1085770318' className="absolute w-full h-full object-cover mix-blend-overlay" />
        
-        <div className='flex items-center justify-center '>
+        <div className='flex items-center justify-center pt-10 pb-5'>
             <form className='max-w-[400px] w-full mx-auto rounded-lg bg-white p-10'>
                 <h2 className='text-4xl font-bold text-center py-5'>Bibliophile's Tool</h2>
                 {error && <div role="alert"> <div className="border relative  border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700"> <p>{error}</p> </div> </div>}

@@ -1,0 +1,89 @@
+DELIMITER $$
+CREATE OR REPLACE Procedure FirstRecc()
+BEGIN
+
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION 
+	BEGIN
+			SELECT -1
+	      ROLLBACK;
+	END;
+
+	START TRANSACTION; 
+	SAVEPOINT beforeItsDone;	
+	-- CLEAR THE TABLE
+	SELECT result.BI,2
+	FROM (
+		SELECT Book_ID_id AS BI, AVG(br.review) AS BAVG 
+		FROM book_app.base_review as br
+		WHERE br.Date >= DATE_SUB(NOW(),INTERVAL 7 DAY) 
+		GROUP BY br.Book_ID_id
+		HAVING COUNT(br.review) > 5
+		ORDER BY BAVG
+		LIMIT 18
+		) AS result;
+		
+
+	COMMIT;
+	SELECT 1;
+END;
+$$
+DELIMITER ;
+
+
+
+DELIMITER $$
+CREATE OR REPLACE Procedure SecondRecc()
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION 
+	BEGIN
+			SELECT -1
+	      ROLLBACK;
+	END;
+
+	START TRANSACTION; 
+	SAVEPOINT beforeItsDone;	
+	
+	SELECT result.BI
+	FROM (
+		SELECT Book_ID_id AS BI, COUNT(br.AllRenatls_ID) AS BCOUNT
+		FROM book_app.base_history as br
+		INNER JOIN book_app.base_bookreaders brs ON br.Reader_ID_id = brs.Reader_ID
+		WHERE br.Date_Taken >= DATE_SUB(NOW(),INTERVAL 7 DAY) 
+		GROUP BY brs.SEX, brs.AGE, br.Book_ID_id
+		ORDER BY BCOUNT
+		-- LIMIT 18 Bez LIMITU BACK OGARNIE ORDER BY USER GENRE
+		) AS result;
+		
+	COMMIT;
+	SELECT 1;
+END;
+$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE OR REPLACE PROCEDURE ThirdRecc()
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION 
+	BEGIN
+			SELECT -1
+	      ROLLBACK;
+	END;
+
+	START TRANSACTION; 
+	SAVEPOINT beforeItsDone;	
+	
+	SELECT result.BI
+	FROM (
+		SELECT Book_ID_id AS BI, COUNT(br.AllRenatls_ID) AS BCOUNT
+		FROM book_app.base_history as br
+		WHERE br.Date_Taken >= DATE_SUB(NOW(),INTERVAL 7 DAY) 
+		GROUP BY br.Book_ID_id
+		ORDER BY BCOUNT
+		LIMIT 18
+		) AS result;
+		
+	COMMIT;
+	SELECT 1;
+END;
+$$
+DELIMITER ;
